@@ -16,6 +16,7 @@ class SignatureViewController: UIViewController {
     @IBOutlet weak var viewSignature: UIViewSignature!
     @IBOutlet weak var buttonTakePhoto: UIButton!
     @IBOutlet weak var buttonSavePhoto: UIButton!
+    @IBOutlet weak var buttonClearSignature: UIButton!
     
     var isSignSignature:Bool = false
     var isTakePhoto:Bool = false
@@ -60,6 +61,9 @@ class SignatureViewController: UIViewController {
             }
             
             UIImageWriteToSavedPhotosAlbum(viewToImage(with: viewContent)!, nil, nil, nil)
+        case buttonClearSignature:
+            viewSignature.clear()
+            isSignSignature = false
         default:
             break;
         }
@@ -83,6 +87,8 @@ extension SignatureViewController: UIImagePickerControllerDelegate, UINavigation
         let image = info[.originalImage] as! UIImage
         imageView.image = image
         isTakePhoto = true
+        isSignSignature = false
+        viewSignature.clear()
         viewSignature.isUserInteractionEnabled = true
         picker.dismiss(animated: true, completion: nil)
     }

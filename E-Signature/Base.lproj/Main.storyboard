@@ -44,13 +44,13 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAz-vv-c41">
-                                <rect key="frame" x="0.0" y="129" width="414" height="733"/>
+                                <rect key="frame" x="0.0" y="190" width="414" height="672"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CZd-Ed-Y9Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="733"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkm-Xb-AqS" customClass="UIViewSignature" customModule="E_Signature" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="733"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -66,23 +66,40 @@
                                     <constraint firstAttribute="bottom" secondItem="bkm-Xb-AqS" secondAttribute="bottom" id="zp0-vQ-ReB"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb4-Bf-PS6">
+                                <rect key="frame" x="16" y="129" width="382" height="45"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Dim-eS-s7Y"/>
+                                </constraints>
+                                <state key="normal" title="Clear Signature">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aq2-8i-mGP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DAz-vv-c41" secondAttribute="bottom" id="5oG-BL-1lU"/>
-                            <constraint firstItem="DAz-vv-c41" firstAttribute="top" secondItem="v90-ap-mwd" secondAttribute="bottom" constant="16" id="H9p-hJ-Iti"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DAz-vv-c41" secondAttribute="trailing" id="IlA-dq-AS3"/>
                             <constraint firstItem="v90-ap-mwd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="Lbs-z5-hR2"/>
                             <constraint firstItem="C0m-Dr-rBT" firstAttribute="leading" secondItem="v90-ap-mwd" secondAttribute="trailing" constant="16" id="Scp-G7-oxe"/>
+                            <constraint firstItem="eb4-Bf-PS6" firstAttribute="top" secondItem="v90-ap-mwd" secondAttribute="bottom" constant="16" id="W9o-Hm-Kei"/>
                             <constraint firstItem="C0m-Dr-rBT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="YyY-II-oxg"/>
                             <constraint firstItem="v90-ap-mwd" firstAttribute="width" secondItem="C0m-Dr-rBT" secondAttribute="width" multiplier="0.974359" id="ZoV-FN-Md7"/>
+                            <constraint firstItem="eb4-Bf-PS6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="e2W-Be-odu"/>
                             <constraint firstItem="v90-ap-mwd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fOX-t6-OUt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C0m-Dr-rBT" secondAttribute="trailing" constant="16" id="h5I-b8-oxH"/>
                             <constraint firstItem="DAz-vv-c41" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rpI-8v-HY3"/>
+                            <constraint firstItem="DAz-vv-c41" firstAttribute="top" secondItem="eb4-Bf-PS6" secondAttribute="bottom" constant="16" id="wWs-7h-aVc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eb4-Bf-PS6" secondAttribute="trailing" constant="16" id="ynI-Wc-4J0"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonClearSignature" destination="eb4-Bf-PS6" id="jB7-Sg-Tyk"/>
                         <outlet property="buttonSavePhoto" destination="C0m-Dr-rBT" id="dCr-JQ-Acu"/>
                         <outlet property="buttonTakePhoto" destination="v90-ap-mwd" id="bxH-Ro-fVi"/>
                         <outlet property="imageView" destination="CZd-Ed-Y9Z" id="JPz-c6-It1"/>
@@ -96,6 +113,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

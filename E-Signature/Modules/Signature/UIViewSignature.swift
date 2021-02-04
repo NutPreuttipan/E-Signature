@@ -31,6 +31,11 @@ class UIViewSignature: UIView {
         self.strokeColor = color
     }
     
+    func clear() {
+        lines.removeAll()
+        setNeedsDisplay()
+    }
+    
     fileprivate var lines = [Line]()
 
     override func draw(_ rect: CGRect) {
