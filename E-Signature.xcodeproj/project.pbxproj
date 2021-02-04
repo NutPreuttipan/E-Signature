@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		03992F5025CB921B00564160 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03992F4F25CB921B00564160 /* AppDelegate.swift */; };
 		03992F5225CB921B00564160 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03992F5125CB921B00564160 /* SceneDelegate.swift */; };
-		03992F5425CB921B00564160 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03992F5325CB921B00564160 /* ViewController.swift */; };
 		03992F5725CB921B00564160 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03992F5525CB921B00564160 /* Main.storyboard */; };
 		03992F5925CB921C00564160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03992F5825CB921C00564160 /* Assets.xcassets */; };
 		03992F5C25CB921C00564160 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03992F5A25CB921C00564160 /* LaunchScreen.storyboard */; };
+		03992F6525CB94AA00564160 /* UIViewSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03992F6425CB94AA00564160 /* UIViewSignature.swift */; };
+		03992F6B25CB94EF00564160 /* SignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03992F6A25CB94EF00564160 /* SignatureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03992F4C25CB921B00564160 /* E-Signature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Signature.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03992F4F25CB921B00564160 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03992F5125CB921B00564160 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		03992F5325CB921B00564160 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03992F5625CB921B00564160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03992F5825CB921C00564160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03992F5B25CB921C00564160 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03992F5D25CB921C00564160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03992F6425CB94AA00564160 /* UIViewSignature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSignature.swift; sourceTree = "<group>"; };
+		03992F6A25CB94EF00564160 /* SignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,30 @@
 			children = (
 				03992F4F25CB921B00564160 /* AppDelegate.swift */,
 				03992F5125CB921B00564160 /* SceneDelegate.swift */,
-				03992F5325CB921B00564160 /* ViewController.swift */,
 				03992F5525CB921B00564160 /* Main.storyboard */,
 				03992F5825CB921C00564160 /* Assets.xcassets */,
 				03992F5A25CB921C00564160 /* LaunchScreen.storyboard */,
 				03992F5D25CB921C00564160 /* Info.plist */,
+				03992F6725CB94B000564160 /* Modules */,
 			);
 			path = "E-Signature";
+			sourceTree = "<group>";
+		};
+		03992F6725CB94B000564160 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				03992F6825CB94BE00564160 /* Signature */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		03992F6825CB94BE00564160 /* Signature */ = {
+			isa = PBXGroup;
+			children = (
+				03992F6A25CB94EF00564160 /* SignatureViewController.swift */,
+				03992F6425CB94AA00564160 /* UIViewSignature.swift */,
+			);
+			path = Signature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03992F5425CB921B00564160 /* ViewController.swift in Sources */,
 				03992F5025CB921B00564160 /* AppDelegate.swift in Sources */,
+				03992F6B25CB94EF00564160 /* SignatureViewController.swift in Sources */,
 				03992F5225CB921B00564160 /* SceneDelegate.swift in Sources */,
+				03992F6525CB94AA00564160 /* UIViewSignature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H2EWZV76MW;
 				INFOPLIST_FILE = "E-Signature/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H2EWZV76MW;
 				INFOPLIST_FILE = "E-Signature/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
